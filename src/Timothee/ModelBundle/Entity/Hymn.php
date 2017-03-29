@@ -49,6 +49,11 @@ class Hymn
      */
     private $lyrics;
 
+    /**
+     * @ORM\OneToOne(targetEntity="Timothee\ModelBundle\Entity\MusicalPart", cascade={"persist","remove"})
+     */
+    private $musicalPart;
+
 
     /**
      * Get id
@@ -154,5 +159,15 @@ class Hymn
     public function getLyrics()
     {
         return $this->lyrics;
+    }
+
+    public function setMusicalPart(MusicalPart $musicalPart = null)
+    {
+        $this->musicalPart = $musicalPart;
+    }
+
+    public function getMusicalPart()
+    {
+        return $this->musicalPart;
     }
 }

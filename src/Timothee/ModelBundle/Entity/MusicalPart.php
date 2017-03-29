@@ -63,4 +63,3 @@ class MusicalPart
         return $this->xml;
     }
 }
-

@@ -19,11 +19,12 @@ class HymnsController extends Controller
     public function getHymnsAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        
         $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findAll();
 
         if(empty($hymns))
             return new JsonResponse(["error" => "La base de donnee est vide !"], Response::HTTP_NOT_FOUND);
+
 
         $formatted = [];
 
