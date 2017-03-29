@@ -1,5 +1,39 @@
 {% extends "TimotheeModelBundle::main.html.twig" %}
 
 {% block body %}
+
 	{# ICI, EDITEUR SPECIAL CHANT AVEC BTS refrain, couplet... (pour formatter le texte du chant avant l'insertion en bdd) #}
+
+	{# 
+	{% for hymn in hymns %}
+		{{ hymn.getNum }}<br>
+		{{ hymn.getTitle | upper }}<br>
+		{{ hymn.getRef }}<br><br>
+		{{ hymn.getLyrics | raw }}<br><br>--------------------<br><br>  
+	{% endfor %}
+	 #}
+
+
+
+	<a href="{{ path('fillBDD') }}">
+		<button
+			class="button">
+			Remplir la base de données
+		</button>
+	</a>
+
+	<a href="{{ path('hymns') }}">
+		<button
+			class="button">
+			Tous les chants (json)
+		</button>
+	</a>
+	
+	<a href="{{ path('hymn', {id:1}) }}">
+		<button
+			class="button">
+			Chant par numéro (json)
+		</button>
+	</a>
+
 {% endblock %}
