@@ -14,3 +14,6 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+
+/src/Timothee/ModelBundle/Entity/*.php~
+/src/Timothee/ModelBundle/Repository/*.php~

@@ -156,4 +156,3 @@ class Hymn
         return $this->lyrics;
     }
 }
-

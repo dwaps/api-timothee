@@ -5,12 +5,12 @@ namespace Timothee\ModelBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Musical_Part
+ * MusicalPart
  *
- * @ORM\Table(name="musical__part")
- * @ORM\Entity(repositoryClass="Timothee\ModelBundle\Repository\Musical_PartRepository")
+ * @ORM\Table(name="musical_part")
+ * @ORM\Entity(repositoryClass="Timothee\ModelBundle\Repository\MusicalPartRepository")
  */
-class Musical_Part
+class MusicalPart
 {
     /**
      * @var int
@@ -44,7 +44,7 @@ class Musical_Part
      *
      * @param string $xml
      *
-     * @return Musical_Part
+     * @return MusicalPart
      */
     public function setXml($xml)
     {
