@@ -1,0 +1,4 @@
+services:
+#    timothee_model.example:
+#        class: Timothee\ModelBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

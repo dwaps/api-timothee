@@ -1,0 +1,5 @@
+timothee_model:
+    resource: "@TimotheeModelBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
