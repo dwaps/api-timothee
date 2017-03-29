@@ -54,6 +54,15 @@ class Hymn
      */
     private $musicalPart;
 
+    public function __construct($title, $num, $ref, $lyrics, $musicalPart=null)
+    {
+        $this->setTitle($title);
+        $this->setNum($num);
+        $this->setRef($ref);
+        $this->setLyrics($lyrics);
+        $this->setMusicalPart($musicalPart);
+    }
+
 
     /**
      * Get id

@@ -8,10 +8,18 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
-use TimotheeModelBundle\Entity\Hymn;
+use Timothee\ModelBundle\Entity\Hymn;
 
 class HymnsController extends Controller
 {
+    /**
+     * @Route("/")
+     */
+    public function homeAction()
+    {
+        return $this->render("TimotheeModelBundle:Hymns:home.html.twig");
+    }
+
     /**
      * @Route("/hymns", name="hymns")
      * @Method({"GET"})
@@ -19,7 +27,7 @@ class HymnsController extends Controller
     public function getHymnsAction()
     {
         $em = $this->getDoctrine()->getManager();
-        
+
         $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findAll();
 
         if(empty($hymns))
