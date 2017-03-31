@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -669,9 +670,9 @@ Et sa fidélité de génération en génération.
 
     /**
      * @Route("hymns/add", name="addHymn")
-     * @Method({"GET"})
+     * @Method({"GET","POST"})
      */
-    public function addHymnAction()
+    public function addHymnAction(Request $request)
     {
         $hymn = new Hymn();
 
@@ -685,6 +686,11 @@ Et sa fidélité de génération en génération.
             ->add('submit', SubmitType::class)
             ->getForm()
         ;
+
+        if($request->isMethod('POST'))
+        {
+            return $this->redirectToRoute('home');
+        }
 
         return $this->render("TimotheeModelBundle:Hymns:hymn-editor.html.twig",
             array(

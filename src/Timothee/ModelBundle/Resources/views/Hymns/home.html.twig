@@ -15,34 +15,30 @@
 
 
 
-	<a href="{{ path('addHymn') }}">
-		<button
-			class="button">
-			Aller au formulaire d'jout de chant
-		</button>
+	<a
+		href="{{ path('addHymn') }}"
+		class="btn btn-danger">
+		Aller au formulaire d'ajout de chant
 	</a>
 
 
 
-	<a href="{{ path('fillBDD') }}">
-		<button
-			class="button">
-			Remplir la base de données
-		</button>
+	<a
+		href="{{ path('fillBDD') }}"
+		class="btn btn-danger">
+		Remplir la base de données
 	</a>
 
-	<a href="{{ path('hymns') }}">
-		<button
-			class="button">
-			Tous les chants (json)
-		</button>
+	<a
+		href="{{ path('hymns') }}"
+		class="btn btn-danger">
+		Tous les chants (json)
 	</a>
 	
-	<a href="{{ path('hymn', {id:1}) }}">
-		<button
-			class="button">
-			Chant par numéro (json)
-		</button>
+	<a
+		href="{{ path('hymn', {id:1}) }}"
+		class="btn btn-danger">
+		Chant par numéro (json)
 	</a>
 
 {% endblock %}

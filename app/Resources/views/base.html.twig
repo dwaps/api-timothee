@@ -4,6 +4,50 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+
+{# 
+        {% stylesheets
+            '@bootstrap_css'
+            'my/other/scss_file1.scss'
+            'my/other/scss_file2.scss'
+
+            filter='scssphp,cssrewrite'
+            output='css/HelloTrip.css' %}
+ #}
+
+        {% stylesheets
+            '@bootstrap_css'
+
+            filter='scssphp,cssrewrite'
+            output='css/apym.css' %}
+
+            <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
+
+        {% endstylesheets %}
+
+
+{# 
+        {% javascripts
+            '@jquery'
+            '@bootstrap_js'
+            'my/other/js_file1.js'
+            'my/other/js_file2.js'
+
+            filter='?jsqueeze'
+            output='js/apym.js' %}
+             #}
+
+        {% javascripts
+            '@jquery'
+            '@bootstrap_js'
+
+            filter='?jsqueeze'
+            output='js/apym.js' %}
+
+            <script src="{{ asset_url }}"></script>
+
+        {% endjavascripts %}
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
