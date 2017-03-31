@@ -8,6 +8,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
+use Symfony\Component\Form\Extension\Core\Type\FormType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+
 use Timothee\ModelBundle\Entity\Hymn;
 
 
@@ -659,6 +664,32 @@ Et sa fidélité de génération en génération.
         ];                
 
         return new JsonResponse($formatted);
+    }
+
+
+    /**
+     * @Route("hymns/add", name="addHymn")
+     * @Method({"GET"})
+     */
+    public function addHymnAction()
+    {
+        $hymn = new Hymn();
+
+        $form = $this
+            ->get("form.factory")
+            ->createBuilder(FormType::class, $hymn)
+            ->add('num', TextType::class)
+            ->add('ref', TextType::class)
+            ->add('title', TextType::class)
+            ->add('lyrics', TextareaType::class)
+            ->add('submit', SubmitType::class)
+            ->getForm()
+        ;
+
+        return $this->render("TimotheeModelBundle:Hymns:hymn-editor.html.twig",
+            array(
+                "addHymnForm" => $form->createView()
+        ));
     }
 
 }

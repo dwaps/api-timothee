@@ -54,7 +54,12 @@ class Hymn
      */
     private $musicalPart;
 
-    public function __construct($title, $num, $ref, $lyrics, $musicalPart=null)
+    public function __construct(
+        $title="",
+        $num="",
+        $ref="",
+        $lyrics="",
+        $musicalPart=null)
     {
         $this->setTitle($title);
         $this->setNum($num);
