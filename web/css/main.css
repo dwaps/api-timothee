@@ -3,3 +3,51 @@
 	position: relative;
 	top: 35px;
 }
+
+
+.bt-refs
+{
+	color: #FFF;
+	box-shadow: 1px 1px 2px gray;
+	margin: 0.5px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+
+.livres-penta
+{
+	background: #8D0000 !important;
+}
+.livres-hist
+{
+	background: #EF700B !important;
+}
+.livres-poet
+{
+	background: #283F93 !important;
+}
+.livres-proph
+{
+	background: #C8BA00 !important;
+}
+.livres-ev
+{
+	background: #AB0088 !important;
+}
+.epitres-paul
+{
+	background: #1FA56D !important;
+}
+.livre-anonyme
+{
+	background: #592C99 !important;
+}
+.autres-epitres
+{
+	background: #6F9E0D !important;
+}
+.apoc
+{
+	background: #F92648 !important;
+}

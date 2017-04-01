@@ -4,15 +4,9 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
 
-{# 
-        {% stylesheets
-            '@bootstrap_css'
-            'my/other/scss_file1.scss'
-            'my/other/scss_file2.scss'
-
-            filter='scssphp,cssrewrite'
-            output='css/HelloTrip.css' %}
- #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/timotheemodel/lib/animate.css/animate.min.css') }}">
+        {% endblock %}
 
         {% stylesheets
             '@bootstrap_css'
@@ -25,18 +19,6 @@
 
         {% endstylesheets %}
 
-
-{# 
-        {% javascripts
-            '@jquery'
-            '@bootstrap_js'
-            'my/other/js_file1.js'
-            'my/other/js_file2.js'
-
-            filter='?jsqueeze'
-            output='js/apym.js' %}
-             #}
-
         {% javascripts
             '@jquery'
             '@bootstrap_js'
@@ -46,6 +28,8 @@
 
             <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+
+        <script src="{{ asset('bundles/timotheemodel/lib/angular/angular.min.js') }}"></script>
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>

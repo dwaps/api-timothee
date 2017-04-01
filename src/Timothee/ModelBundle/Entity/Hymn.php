@@ -91,6 +91,10 @@ class Hymn
     public function setTitle($title)
     {
         $title = trim(strip_tags($title));
+
+        if($title != "" AND !preg_match('/^[^0-9]/',$title))
+            array_push($this->errors, ">> Le titre du chant est invalide !");
+
         $this->title = $title;
 
         return $this;
@@ -118,7 +122,7 @@ class Hymn
         $num = trim(strip_tags($num));
 
         if($num != "" AND !preg_match('/^(\d{1,3})$|^(\d{1,2}[ab])$/',$num))
-            array_push($this->errors, ">> Le numéro de chant est invalide");
+            array_push($this->errors, ">> Le numéro de chant est invalide !");
 
         $this->num = $num;
 
@@ -144,6 +148,11 @@ class Hymn
      */
     public function setRef($ref)
     {
+        $ref = trim(strip_tags($ref));
+
+        if($ref != "" AND !preg_match('/^[1-3]? ?[A-Z][a-z] \d{1,3}(:\d{1,3})?([-,]\d{1,3}(:\d{1,3}([-,]\d{1,3})?)?)?(;[1-3]? ?[A-Z][a-z] \d{1,3}(:\d{1,3})?([-,]\d{1,3}(:\d{1,3}([-,]\d{1,3})?)?)?){0,5}$/',$ref))
+            array_push($this->errors, ">> Le format de référence n'est pas correct !");
+
         $this->ref = $ref;
 
         return $this;
