@@ -54,6 +54,8 @@ class Hymn
      */
     private $musicalPart;
 
+    private $errors = [];
+
     public function __construct(
         $title="",
         $num="",
@@ -88,6 +90,7 @@ class Hymn
      */
     public function setTitle($title)
     {
+        $title = trim(strip_tags($title));
         $this->title = $title;
 
         return $this;
@@ -112,6 +115,11 @@ class Hymn
      */
     public function setNum($num)
     {
+        $num = trim(strip_tags($num));
+
+        if($num != "" AND !preg_match('/^(\d{1,3})$|^(\d{1,2}[ab])$/',$num))
+            array_push($this->errors, ">> Le numéro de chant est invalide");
+
         $this->num = $num;
 
         return $this;
@@ -183,5 +191,15 @@ class Hymn
     public function getMusicalPart()
     {
         return $this->musicalPart;
+    }
+
+    public function hasError()
+    {
+        return sizeof($this->errors)>0;
+    }
+
+    public function getErrors()
+    {
+        return $this->errors;
     }
 }

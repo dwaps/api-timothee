@@ -9,12 +9,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-use Symfony\Component\Form\Extension\Core\Type\FormType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
 use Timothee\ModelBundle\Entity\Hymn;
+use Timothee\ModelBundle\Form\HymnType;
 
 
 class HymnsController extends Controller
@@ -675,26 +671,48 @@ Et sa fidélité de génération en génération.
     public function addHymnAction(Request $request)
     {
         $hymn = new Hymn();
+        $errors = [];
 
-        $form = $this
-            ->get("form.factory")
-            ->createBuilder(FormType::class, $hymn)
-            ->add('num', TextType::class)
-            ->add('ref', TextType::class)
-            ->add('title', TextType::class)
-            ->add('lyrics', TextareaType::class)
-            ->add('submit', SubmitType::class)
-            ->getForm()
-        ;
+        // $num = "7b";
+
+        // $num = trim(strip_tags($num));
+
+        // if($num != "" AND !preg_match('/^(\d{1,3})$|^(\d{1,2}[ab])$/',$num))
+        // {
+        //     dump('pas bon !');
+        //     die;
+        // }
+
+        // dump($num);
+        // die;
+
+        $form = $this->createForm(HymnType::class, $hymn);
 
         if($request->isMethod('POST'))
         {
-            return $this->redirectToRoute('home');
+            $form->handleRequest($request);
+
+            if($form->isValid() AND !$hymn->hasError())
+            {
+                dump($hymn->hasError()); die;
+
+                // $em->persist($hymn);
+                // $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info','Le chant a bien été enregistré en base de donnée !');
+
+                return $this->redirectToRoute('home');
+            }
+            else
+            {
+                $errors = $hymn->getErrors();
+            }
         }
 
         return $this->render("TimotheeModelBundle:Hymns:hymn-editor.html.twig",
             array(
-                "addHymnForm" => $form->createView()
+                "addHymnForm" => $form->createView(),
+                "errors" => $errors
         ));
     }
 

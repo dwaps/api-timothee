@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
 
 {# 
         {% stylesheets
@@ -17,6 +16,7 @@
 
         {% stylesheets
             '@bootstrap_css'
+            'css/main.css'
 
             filter='scssphp,cssrewrite'
             output='css/apym.css' %}
@@ -45,13 +45,16 @@
             output='js/apym.js' %}
 
             <script src="{{ asset_url }}"></script>
-
         {% endjavascripts %}
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>
