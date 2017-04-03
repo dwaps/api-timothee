@@ -98,7 +98,8 @@ Et rendez grâces en toute chose au Seigneur !
                 $route = "editHymn";
             }
 
-            return $this->redirectToRoute($route, array('id' => $numberHymn));
+            if(null !== $numberHymn AND $numberHymn != "")
+                return $this->redirectToRoute($route, array('id' => $numberHymn));
         }
 
         return $this->render("TimotheeModelBundle:Hymns:home.html.twig");

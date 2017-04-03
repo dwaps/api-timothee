@@ -5,7 +5,7 @@ namespace Timothee\ModelBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class MusicalPartType extends AbstractType
 {
@@ -14,13 +14,7 @@ class MusicalPartType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('xml', TextareaType::class, array(
-                'label' => 'Partition xml',
-                'attr' => array(
-                    'placeholder' => 'Copier tout le fichier xml ici...',
-                    'rows' => '15'
-                )
-            ));
+        $builder->add('file', FileType::class);
     }
     
     /**

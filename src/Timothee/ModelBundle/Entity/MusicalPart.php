@@ -3,6 +3,7 @@
 namespace Timothee\ModelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * MusicalPart
@@ -28,6 +29,7 @@ class MusicalPart
      */
     private $xml;
 
+    private $file;
 
     /**
      * Get id
@@ -61,5 +63,37 @@ class MusicalPart
     public function getXml()
     {
         return $this->xml;
+    }
+
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+    }
+
+    public function uploadFile()
+    {
+        if(null === $this->file)
+            return;
+
+        $name = $this->file->getClientOriginalName();
+
+        $this->file->move($this->getUploadRootDir(), $name);
+        $this->xml = $name;
+    }
+
+    public function getUploadDir()
+    {
+        return 'uploaded/xmlpart';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../../web/'.$this->getUploadDir();
     }
 }
