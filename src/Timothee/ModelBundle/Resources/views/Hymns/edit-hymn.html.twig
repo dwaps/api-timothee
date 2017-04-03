@@ -1,0 +1,172 @@
+{% extends 'TimotheeModelBundle::main.html.twig' %}
+
+
+{% block body %}
+
+{# RAPPEL FORMAT REFERENCES #}
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			Jd 3&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22-33&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22-6:3&nbsp;&nbsp;&nbsp;
+			<span class="hidden-xs">|</span>
+			<br class="visible-xs">
+			&nbsp;&nbsp;&nbsp;Mt 5:22-6:3,5,7&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22;Lc 3:14&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;1 Sm 5-7:22
+		</div>
+	</div>
+{# ! #}
+
+{# FORM #}
+	<div class="well animated fadeIn">
+		<div class="row">
+			<div class="col-xs-12">
+				{{ form_start( addHymnForm ) }}
+				{{ form_errors( addHymnForm ) }}
+			</div>
+			<div class="col-xs-6 col-sm-2">
+				{{ form_label( addHymnForm.num ) }}
+				{{ form_errors( addHymnForm.num ) }}
+				{{ form_widget( addHymnForm.num ) }}
+			</div>
+			<div
+				class="col-xs-6 col-sm-4"
+				ng-app="adminRefs"
+				ng-controller="refsCtrl"
+				id="field-refs">
+				{{ form_label( addHymnForm.ref ) }}
+				{{ form_errors( addHymnForm.ref ) }}
+				<span>
+					{% if ref is defined %}
+						{{ form_widget(addHymnForm.ref) }}
+					{% else %}
+						{{ form_widget(addHymnForm.ref, { 'attr':{ 'ng-model':'inputRefsValue' } } ) }}
+					{% endif %}
+				</span>
+				<span ng-bind="livres|filter:inputRefsValue|suppressRest"></span>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				{{ form_label( addHymnForm.title ) }}
+				{{ form_errors( addHymnForm.title ) }}
+				{{ form_widget( addHymnForm.title ) }}
+			</div>
+			<div class="col-xs-12 margin-top">
+				{{ form_rest( addHymnForm ) }}
+			</div>
+			<div class="col-xs-12">
+				{{ form_end( addHymnForm ) }}
+			</div>
+		</div>
+	</div>
+{# ! #}
+
+
+
+{# MODALE MESSAGES ERREURS #}
+	<div
+		class="modal fade"
+		id="modal-errors"
+		tabindex="-1"
+		role="dialog"
+		aria-labelledby="label-modal-errors">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button
+					type="button"
+					class="close"
+					data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="label-modal-errors">ERREURS DU FORMULAIRE</h4>
+				</div>
+				<div class="modal-body">
+					{% for mss in errors %}
+					    {{ mss }}
+					    <br>
+					{% endfor %}
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fermer la fenêtre</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% if errors|length>0 %}
+    	<script>$('#modal-errors').modal({show:true});</script>
+	{% endif %}
+{# ! MODALE MESSAGES ERREURS #}
+
+
+{# CODE ANGULARJS POUR LA GESTION DU CHOIX DES REFERENCES #}
+    <script>
+	    angular
+	    	.module('adminRefs', [])
+	    	.controller('refsCtrl', refsCtrl)
+	    	.filter('suppressRest', suppressRest)
+	    	.factory('getRefs', getRefs)
+	    ;
+
+	    // CONTROLLER
+	    function refsCtrl($scope, $rootScope, getRefs, $timeout)
+	    {
+	    	if(!$rootScope.refs) getRefs();
+	    	$scope.livres = [];
+
+	    	var inputRefs = document.querySelector('#field-refs textarea');
+	    	$scope.inputRefsValue = "";
+
+	    	inputRefs.onkeyup = function()
+	    	{
+	    		if($rootScope.refs)
+	    		{
+		    		if($scope.livres.length==0)
+		    		{
+			    		$rootScope.refs.forEach(
+			    			function(r)
+			    			{
+			    				$scope.livres.push(r.name);
+			    			}
+			    		);
+		    		}
+	    		}
+	    	};
+	    }
+
+
+	    // FILTER
+	    function suppressRest()
+	    {
+	    	return function(input)
+	    	{
+	    		return input.join().replace(/,/g, " ");
+	    	}
+	    }
+
+
+	    // SERVICE
+	    function getRefs($http, $rootScope)
+	    {
+			return function ()
+				{
+					$http.get('/bundles/timotheemodel/res/livres-bible.json')
+						.then(
+							function(data, status, headers, config)
+							{
+								$rootScope.refs = data.data;
+								console.log( "Fichier json récupéré :" );
+								console.log( $rootScope.refs );
+							},
+							function(error)
+							{
+								console.log("Récupération du fichier json impossible !");
+								console.log(error);
+							}
+						)
+					;
+				}
+			;
+	    }
+    </script>
+{# ! #}
+    
+{% endblock %}

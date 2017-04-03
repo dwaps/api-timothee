@@ -24,7 +24,6 @@ class HymnType extends AbstractType
             ->add('num',
                 TextType::class,
                 array(
-                    'required' => false,
                     'label' => 'Numéro du chant',
                     'attr' => array(
                         'placeholder' => 'Numéro du chant...'
@@ -35,14 +34,12 @@ class HymnType extends AbstractType
                 array(
                     'label' => 'Référence.s',
                     'attr' => array(
-                        'autofocus' => true,
                         'placeholder' => 'Saisir la référence au bon format !'
                     ),
                 ))
             ->add('title',
                 TextType::class,
                 array(
-                    'required' => false,
                     'label' => 'Titre du chant',
                     'attr' => array(
                         'placeholder' => 'Titre du chant...'
@@ -51,7 +48,6 @@ class HymnType extends AbstractType
             ->add('lyrics',
                 TextareaType::class,
                 array(
-                    'required' => false,
                     'label' => 'Paroles du chant',
                     'attr' => array(
                         'placeholder' => 'Paroles du chant...',
@@ -60,7 +56,6 @@ class HymnType extends AbstractType
                 ))
             ->add('musicalPart', MusicalPartType::class,
                 array(
-                    'required' => false,
                     'label' => ' '
                 ))
             ->add('enregistrer', SubmitType::class)

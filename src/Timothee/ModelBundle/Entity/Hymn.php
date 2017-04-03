@@ -81,6 +81,11 @@ class Hymn
         return $this->id;
     }
 
+    public function setId(int $id)
+    {
+        $this->id = $id;
+    }
+
     /**
      * Set title
      *
@@ -210,5 +215,18 @@ class Hymn
     public function getErrors()
     {
         return $this->errors;
+    }
+
+    public function formatLyricsFromBDD()
+    {
+        $this->lyrics = preg_replace("/<span style='padding-left:15px'><\/span>/", "\t", $this->lyrics);
+        $this->lyrics = preg_replace("/<br>/", "\n", $this->lyrics);
+    }
+
+    public function formatLyricsToBDD()
+    {
+        $this->lyrics = preg_replace("/\t/", "<span style='padding-left:15px'></span>", $this->lyrics);
+        $this->lyrics = preg_replace("/\n/", "<br>", $this->lyrics);
+        $this->lyrics = str_replace(array("\r"), "", $this->lyrics);
     }
 }
