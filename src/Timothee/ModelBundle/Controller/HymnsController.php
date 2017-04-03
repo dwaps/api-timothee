@@ -127,11 +127,12 @@ Et rendez grâces en toute chose au Seigneur !
                 $text = "";
 
                 for ($i = 3; $i < sizeof($tab); $i++) { 
-                    $text .= preg_replace("/\t/", "<span style='padding-left:15px'></span>", $tab[$i]);
-                    $text .= preg_replace("/\n/", "<br>", $tab[$i]);
+                    $text .= trim(
+                        preg_replace("/\t/", "<span style='padding-left:15px'></span>", $tab[$i])."<br>"
+                    );
                 }
 
-                $text = trim($text);
+                $text = preg_replace("/<br>\s*$/", "", $text);
 
                 $hymn = new Hymn($title,$num,$ref,$text);
                 $em->persist($hymn);
@@ -225,6 +226,7 @@ Et rendez grâces en toute chose au Seigneur !
 
             if($form->isValid() AND !$hymn->hasError())
             {
+                dump($hymn); die;
                 // $em = $this->getDoctrine()->getManager();
                 // $em->persist($hymn);
                 // $em->flush();
@@ -238,7 +240,7 @@ Et rendez grâces en toute chose au Seigneur !
             }
         }
 
-        return $this->render("TimotheeModelBundle:Hymns:add-hymn.html.twig",
+        return $this->render("TimotheeModelBundle:Hymns:admin-hymn.html.twig",
             array(
                 "addHymnForm" => $form->createView(),
                 "errors" => $errors
@@ -279,7 +281,7 @@ Et rendez grâces en toute chose au Seigneur !
             }
         }
 
-        return $this->render("TimotheeModelBundle:Hymns:edit-hymn.html.twig",
+        return $this->render("TimotheeModelBundle:Hymns:admin-hymn.html.twig",
             array(
                 "addHymnForm" => $form->createView(),
                 "ref" => $hymn->getRef(),

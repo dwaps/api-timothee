@@ -6,10 +6,16 @@
 {# RAPPEL FORMAT REFERENCES #}
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			Jd 3&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22-33&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22-6:3&nbsp;&nbsp;&nbsp;
+			Jd 3&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			Mt 5:22&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			Mt 5:22-33&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			Mt 5:22-6:3&nbsp;&nbsp;&nbsp;
 			<span class="hidden-xs">|</span>
 			<br class="visible-xs">
-			&nbsp;&nbsp;&nbsp;Mt 5:22-6:3,5,7&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Mt 5:22;Lc 3:14&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;1 Sm 5-7:22
+			&nbsp;&nbsp;&nbsp;
+			Mt 5:22-6:3,5,7&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			Mt 5:22;Lc 3:14&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			1 Sm 5-7:22
 		</div>
 	</div>
 {# ! #}
@@ -34,7 +40,11 @@
 				{{ form_label( addHymnForm.ref ) }}
 				{{ form_errors( addHymnForm.ref ) }}
 				<span>
-					{{ form_widget(addHymnForm.ref, { 'attr':{ 'ng-model':'inputRefsValue' } } ) }}
+					{% if ref is defined %}
+						{{ form_widget(addHymnForm.ref) }}
+					{% else %}
+						{{ form_widget(addHymnForm.ref, { 'attr':{ 'ng-model':'inputRefsValue' } } ) }}
+					{% endif %}
 				</span>
 				<span ng-bind="livres|filter:inputRefsValue|suppressRest"></span>
 			</div>
@@ -130,7 +140,7 @@
 
 
 	    // FILTER
-	    function suppressRest()
+	    function suppressRest($rootScope)
 	    {
 	    	return function(input)
 	    	{

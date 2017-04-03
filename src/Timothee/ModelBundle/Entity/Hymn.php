@@ -154,8 +154,8 @@ class Hymn
     public function setRef($ref)
     {
         $ref = trim(strip_tags($ref));
-
-        if($ref != "" AND !preg_match('/^[1-3]? ?[A-Z][a-z] \d{1,3}(:\d{1,3})?([-,]\d{1,3}(:\d{1,3}([-,]\d{1,3})?)?)?(;[1-3]? ?[A-Z][a-z] \d{1,3}(:\d{1,3})?([-,]\d{1,3}(:\d{1,3}([-,]\d{1,3})?)?)?){0,5}$/',$ref))
+        
+        if($ref != "" AND !preg_match('/;?([1-3] )?[A-Z][a-z] \d{1,3}([-:;,]\d{1,3})*/',$ref))
             array_push($this->errors, ">> Le format de référence n'est pas correct !");
 
         $this->ref = $ref;
