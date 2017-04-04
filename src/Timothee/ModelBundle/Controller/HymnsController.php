@@ -90,16 +90,24 @@ Et rendez grâces en toute chose au Seigneur !
             if($request->request->get('numberShowHymn'))
             {
                 $numberHymn = $request->request->get('numberShowHymn');
-                $route = "hymn";
+                $numberHymn = trim($numberHymn);
+                if(preg_match("/^\d{1,3}a?b?$/", $numberHymn))
+                    $route = "hymn";
+                else
+                    $numberHymn = "";
             }
             else
             {
                 $numberHymn = $request->request->get('numberEditHymn');
-                $route = "editHymn";
+                $numberHymn = trim($numberHymn);
+                if(preg_match("/^\d{1,3}a?b?$/", $numberHymn))
+                    $route = "editHymn";
+                else
+                    $numberHymn = "";
             }
 
             if(null !== $numberHymn AND $numberHymn != "")
-                return $this->redirectToRoute($route, array('id' => $numberHymn));
+                return $this->redirectToRoute($route, array('num' => $numberHymn));
         }
 
         return $this->render("TimotheeModelBundle:Hymns:home.html.twig");
@@ -162,7 +170,7 @@ Et rendez grâces en toute chose au Seigneur !
         $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findAll();
 
         if(empty($hymns))
-            return new JsonResponse(["error" => "La base de donnee est vide !"], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(array(), Response::HTTP_NOT_FOUND);
 
 
         $formatted = [];
@@ -184,27 +192,35 @@ Et rendez grâces en toute chose au Seigneur !
     }
 
     /**
-     * @Route("/hymns/{id}", name="hymn", requirements={"id"="\d+"})
+     * @Route("/hymns/{num}", name="hymn", requirements={"num"="\d+a?b?"})
      * @Method({"GET"})
      */
-    public function getHymnAction($id)
+    public function getHymnAction($num)
     {
         $em = $this->getDoctrine()->getManager();
 
         $hymn = $em
                 ->getRepository("TimotheeModelBundle:Hymn")
-                ->find($id);
+                ->findby(array("num" => $num));
 
         if(empty($hymn))
-            return new JsonResponse(["error" => "Ce chant est introuvable !"], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(array(), Response::HTTP_NOT_FOUND);
 
-        $formatted = [
-            "id" => $hymn->getId(),
-            "title" => $hymn->getTitle(),
-            "num" => $hymn->getNum(),
-            "ref" => $hymn->getRef(),
-            "lyrics" => $hymn->getLyrics()
-        ];                
+
+        $formatted = [];
+
+        foreach ($hymn as $h) {
+            array_push(
+                $formatted,
+                [
+                    "id" => $h->getId(),
+                    "title" => $h->getTitle(),
+                    "num" => $h->getNum(),
+                    "ref" => $h->getRef(),
+                    "lyrics" => $h->getLyrics()
+                ]
+            );       
+        }              
 
         return new JsonResponse($formatted);
     }
@@ -250,18 +266,24 @@ Et rendez grâces en toute chose au Seigneur !
 
 
     /**
-     * @Route("hymns/edit/{id}", name="editHymn")
+     * @Route("hymns/edit/{num}", name="editHymn", requirements={"num"="\d+a?b?"})
      * @Method({"GET","POST"})
      */
-    public function editHymnAction(Request $request, $id)
+    public function editHymnAction(Request $request, $num)
     {
         $em = $this->getDoctrine()->getManager();
-        $hymn = $em->getRepository("TimotheeModelBundle:Hymn")->find($id);
-        $errors = [];
+        $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findBy(array("num" => $num));
+        $errors = []; $hymn = null;
+
+
+        foreach ($hymns as $h) { $hymn = $h; }
+
+        if(null === $hymn)
+            return $this->redirectToRoute("home");
 
         $hymn->formatLyricsFromBDD();
-
         $form = $this->createForm(HymnType::class, $hymn);
+
 
         if($request->isMethod('POST'))
         {
