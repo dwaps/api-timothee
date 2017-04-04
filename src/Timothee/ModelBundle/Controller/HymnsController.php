@@ -20,571 +20,335 @@ class HymnsController extends Controller
     private $hymns = "
 
 
-77
-Ô Dieu, prête l'oreille
-Ps 55
-Ô Dieu, prête l'oreille et entends ma prière !
-Ô Dieu, ne te dérobe pas à mes supplications !
-Écoute-moi et réponds-moi !
-J'erre çà et là dans mon chagrin et mon âme s'agite,
-Car l'ennemi m'entoure, il me poursuit ! Il me poursuit !
-
-Et moi, je crie à Dieu, l'Éternel me sauvera !
-Le soir, le matin, à midi, je soupire et je gémis
-Et mon Sauveur entend ma voix.
-Il me rend la paix et me délivre; quand je suis dans la crainte
-Je me confie en toi ! tu me soutiendras, tu me soutiendras !
-
-
-78
-Mon Dieu, mon Dieu pourquoi ?
-Ps 22
-Mon Dieu, mon Dieu, pourquoi m'as-tu abandonné,
-Et t'éloignes-tu sans me secourir ?
-Mon Dieu, mon Dieu, pourquoi, sans écouter mes plaintes,
-T'éloignes-tu sans me secourir ?
-Des scélérats rôdent autour de moi,
-Semblables au lion qui déchire et rugit.
-Mon Dieu, je crie le jour et tu ne réponds pas.
-Dans la nuit, et je n'ai point de repos.
-
-Oh ! Ne T’éloigne pas, quand la détresse est proche,
-Quand personne ne vient à mon secours.
-Ils ont percé mes mains, ils ont percé mes pieds,
-Et je pourrais compter tous mes os.
-Ils se sont partagé mes vêtements,
-Ils ont tiré au sort ma tunique.
-Pourtant tu es le Saint, tu délivrais nos pères.
-Ils criaient à toi; ils étaient sauvés.
-Oh ! Ne t'éloigne pas, ne cache pas Ta face
-Toi qui es ma force, viens à mon secours,
-Éternel, Éternel !
-
-
-79
-Je vous exhorte donc
-Rm 12
-\tJe vous exhorte donc, mes frères, oui mes frères,
-\tPar les compassions de Dieu,
-\tJe vous exhorte donc, mes frères,
-\tÀ offrir vos corps comme un sacrifice vivant,
-\tSaint, agréable à Dieu,
-\tCe qui sera de votre part
-\tUn culte raisonnable, un culte raisonnable.
-
-Ne vous conformez pas au monde, mais soyez transformés
-Par le renouvellement de l'intelligence.
-
-Afin de discerner la volonté, la volonté de Dieu,
-Ce qui est bon et parfait, bon et agréable.
-
-
-80
-Les sacrifices
-Ps 32;51
-\tLes sacrifices qui plaisent à l'Éternel,
-\tC'est un esprit brisé et une âme humiliée.
-\tÉternel ! Crée en moi un cœur purifié,
-\tUn esprit disposé à écouter ta voix.
-
-Éternel Dieu ! Tant que je me suis tu,
-Mes os se consumaient, mon âme gémissait.
-Alors je dis : \"Mon Dieu, j'avoue mes transgressions,
-Ne me rejette pas, accorde Ton pardon !\"
-Tu détournas les yeux de mon iniquité.
-Tu me rendis la joie, la joie de mon salut.
-
-
-81
-Mon fils
-Pr 1;Jc 1
-\tMon fils, si des pécheurs te séduisent,
-\tNe te laisse pas gagner par eux.
-\tMon fils, s'ils te disent : \"Viens avec nous !\"
-\tDétourne ton pied de leur sentier,
-\tNe te mets pas en chemin avec eux. (fin : bis)
-
-Quelqu'un mettra-t-il du feu dans son sein
-Sans danger qu'il ne s'enflamme ?
-Peut-on marcher sur des charbons ardents
-Sans que les pieds ne soient brûlés ?
-
-Chacun de nous est tenté,
-Amorcé par sa propre convoitise.
-La convoitise enfante le péché,
-Et le péché produit la mort !
-
-Supporte avec patience la tentation,
-Persévère dans l'épreuve;
-Tu recevras la couronne de vie
-Que le Seigneur nous a promise.
-
-
-82
-Heureux tous ceux...
-Ps 119
-\tHeureux tous ceux qui sont intègres dans leur voie,
-\tQui marchent dans la loi de Dieu.
-\tHeureux ceux qui gardent ses commandements,
-\tQui le suivent de tout leur cœur.
-
-Celui qui marche dans ses voies
-Ne commet plus d'iniquités.
-Tu as prescrit tes ordonnances
-Pour qu'on les observe avec soin.
-
-\tPuissent mes actions être bien réglées,
-\tEt que je garde tes statuts !
-\tAlors je ne rougirai point devant toi,
-\tDevant tous tes commandements.
-
-Je te louerai dans la droiture.
-Je serre ta parole dans mon cœur
-Afin de ne pas retomber.
-Béni sois-Tu, ô Éternel !
-
-\tHeureux tous ceux qui sont intègres dans leur voie,
-\tQui marchent dans la loi de Dieu.
-\tHeureux ceux qui gardent ses commandements,
-\tQui le suivent de tout leur cœur.
-
-
-83
-Demandez
-Mt 7;Jn 15;Lc 18
-\tDemandez, on vous donnera,
-\tOui, cherchez et vous trouverez !
-\tFrappez et l'on vous ouvrira,
-\tCar quiconque demande reçoit.
-
-Si mes paroles demeurent en vous,
-Et si vous demeurez en moi,
-Demandez tout ce que vous voudrez;
-Cela vous sera accordé.
-
-Priez, ne vous relâchez donc pas !
-Dieu justifiera ses élus.
-Et ceux qui crient à lui jour et nuit
-Sans tarder seront exaucés.
-
-
-84
-Qui est comme toi ?
-Ex 15
-\tQui est comme toi parmi les dieux ?
-\tQui est comme toi, magnifique en sainteté,
-\tDigne de louanges, opérant des prodiges ?
-\tSoyez saints, car je suis saint !
-
-Par ta bienveillance tu nous as conduits.
-Par ta puissance tu me diriges
-Vers la demeure de ta sainteté.
-
-Tu m'amèneras, tu m'établiras
-Sur la montagne de l'héritage,
-Au sanctuaire fondé par tes mains.
-
-
-85
-À lui soit la gloire
-Ep 3
-\tÀ lui soit la gloire dans l'Église et en Jésus-Christ,
-\tDans toutes les générations, aux siècles des siècles !
-\tGloire à celui qui peut faire, par la puissance qui agit,
-\tInfiniment au-delà de ce que nous demandons.
-\tÀ lui soit la gloire dans l'Église, et en Jésus-Christ !
-
-Je fléchis les genoux devant le Père,
-Duquel tire son nom toute famille
-Dans les cieux et sur la terre,
-Afin qu'il nous donne, selon la richesse de sa gloire,
-D'être puissament fortifiés
-Par son Esprit dans l'homme intérieur.
-
-Que Jésus dans nos cœurs par la foi vive,
-Enracinés et fondés dans l'amour,
-Pour comprendre sa longueur,
-Sa grande profondeur qui surpasse toute connaissance,
-En sorte que, par son Esprit,
-La plénitude remplisse notre cœur.
-
-
-86
-Louez le nom de l'Éternel
-Ps 135
-\tLouez ! Louez le nom de l'Éternel !
-\tLouez ! Louez le nom de Dieu !
-\tLouez, serviteurs de l'Éternel
-\tQui vous tenez dans la maison de l'Éternel.
-\tLouez ! Louez le nom de l'Éternel ! Louez !
-\tLouez dans les parvis de sa maison.
-\tLouez l'Éternel, car l'Éternel est bon !
-\tChantez à son nom, car il est favorable !
-\tCar l'Éternel nous a choisis.
-
-Je sais que l'Éternel est grand !
-Oui, notre Seigneur est au-dessus de tous les dieux.
-Tout ce que l'Éternel veut, il le fait,
-Dans les cieux et sur la terre,
-Dans les mers et dans tous les abîmes.
-
-
-87
-Si donc vous êtes ressuscités
-Cl 3;Ph 3
-Si donc vous êtes ressuscités,
-Êtes ressuscités avec Christ,
-Alors cherchez les choses d'en-haut,
-Où Christ est à la droite de Dieu.
-Affectionnez-vous aux choses d'en-haut
-Et non à celles qui sont sur la terre.
-
-\tCar vous êtes morts et votre vie est cachée avec Christ.
-\tSi donc vous êtes ressuscités,
-\tAlors cherchez les choses d'en-haut,
-\tOù Christ est à la droite de Dieu.
-
-Mais notre cité est dans les cieux
-D'où nous attendons aussi Jésus.
-Et quand Christ, notre vie, paraîtra,
-Alors nous paraîtrons avec lui.
-Dans sa gloire il nous emportera,
-Et il nous rendra semblables à lui.
-
-
-88
-Tu es la source d'eau vive
-Jr 17
-\tTu es la source d'eau vive, grande est ma plaie !
-\tGuéris-moi, Éternel, et je serai guéri !
-\tJe viens à toi, mon seul refuge et mon appui;
-\tÔ mon Dieu, sauve-moi et je serai sauvé !
-
-Le péché écrit avec un burin de fer,
-Devant Dieu est gravé sur la table des cœurs,
-Il attire sur nous le jour du malheur;
-Nous avons allumé le feu de sa colère.
-
-Le cœur de l'homme est tortueux par-dessus tout.
-L'Éternel éprouve le cœur, sonde les reins,
-Rend à chacun selon l'œuvre de ses mains
-Et manifeste la grandeur de son courroux.
-
-
-89
-Oh ! Soumettez-vous à Dieu !
-Jc 4
-\tOh ! Soumettez-vous à Dieu !
-\t(Soumettez-vous à Dieu !)
-\tApprochez-vous de lui;
-\tIl s'approchera de vous.
-\t(Approchez-vous de lui !)
-\tNe lui résistez plus.
-\tHumiliez-vous devant lui, il vous élèvera.
-
-D'où peuvent venir vos luttes
-Et d'où viennent vos querelles ?
-N'est-ce pas de vos passions
-Qui combattent dans vos membres ?
-
-Et si nous aimons le monde
-Nous sommes des adultères.
-Dieu aime avec jalousie
-L'Esprit Saint qui nous habite.
-
-Oui, sentons notre misère,
-Soyons dans le deuil, les larmes.
-Changeons la joie en tristesse
-Nettoyons nos mains souillées !
-
-
-90
-Servez l'Éternel
-Ps 100;105;106;116;130
-\tServez l'Éternel avec joie !
-\tIl nous a faits, nous sommes à lui.
-\tServez l'Éternel avec joie !
-\tCélébrez-Le, bénissez son nom !
-
-Car si tu gardais le souvenir de nos iniquités, ô Éternel,
-Qui donc subsisterait devant toi ?
-Seigneur, qui pourrait subsister devant toi ?
-
-\tChantez, chantez à l'Éternel !
-\tJ'étais affaibli, il m'a sauvé.
-\tChantez, chantez à l'Éternel !
-\tGlorifiez-vous de son saint nom !
-
-Car l'Éternel m'a fait du bien,
-Il a délivré mon âme de la mort.
-Le pardon se trouve auprès de lui.
-Heureux qui observe et pratique ses lois !
-
-
-91
-Il t'a fait sortir
-Dt 4;6;7;8;11
-Il t'a fait sortir de la maison de servitude.
-Il a fait jaillir pour toi l'eau vive du rocher.
-Il t'a nourri de la manne que tu ne connaissais pas
-Afin de t'humilier et de t'éprouver
-Pour te faire ensuite du bien !
-Si tu écoutes et si tu observes ses ordonnances,
-L'Éternel, ton Dieu, t'aimera et te bénira.
-Si tu aimes de toutes tes forces
-Et de toute ton âme l'Éternel, ton Dieu,
-Et si tu le cherches de tout ton cœur, alors tu le trouveras.
-
-Tous les jours de ta vie sur ton âme, sur ton âme,
-Veille attentivement et prends garde, prends garde à toi
-De crainte que tu n'oublies les choses que tu as vues.
-Car l'homme ne vit pas de pain seulement
-Mais de toute parole de Dieu !
-Ne t'allie pas aux nations qui servent les idoles,
-Car tu es un peuple saint pour l'Éternel ton Dieu.
-Fais tout ce qui est droit
-Et ce qui est bien aux yeux de l'Éternel.
-Et garde-toi d'oublier l'Éternel, l'Éternel, ton Dieu.
-
-
-92
-Éternel, mon dieu, je t'invoque
-Ps 141;142;143
-\tÉternel, mon Dieu, je t'invoque,
-\tOh ! Viens en hâte auprès de moi !
-\tPrête l'oreille à ma voix !
-\tQuand je t'invoque, que ma prière soit devant toi !
-
-Que ma prière soit devant toi comme l'encens,
-Et l'élévation de mes mains comme l'offrande,
-Comme l'offrande du soir.
-De ma voix je crie à lui, de ma voix je l'implore.
-Je répands ma plainte, je lui raconte ma détresse.
-
-Et quand mon esprit est abattu dans mon cœur,
-Exauce-moi dans ta justice, ô mon Sauveur,
-Dans ta justice, Seigneur !
-Ô Dieu, tu es mon refuge, mon partage sur la terre,
-Mon libérateur, le rocher de mon salut !
-
-\tÉternel, mon Dieu, je t'adore
-\tCar par ta grâce tu m'as sauvé
-\tJe te livre mon âme, mon corps,
-\tPour te servir à la louange de ta gloire (bis)
-
-
-93
-L’Esprit du Seigneur
+101
+J'aime l'éternel
+Ps 116
+J'aime l'Éternel, car il entend ma voix,
+(J'aime l'Éternel, car il entend ma voix)
+Et il a penché son oreille vers moi.
+Et je le loue, parce qu'il m'a exaucé.
+(Et je le loue parce qu'il m'a exaucé)
+Il est devenu mon salut.
+J'étais malheureux, mais mon Dieu m'a sauvé.
+(J'étais malheureux, mais mon Dieu m'a sauvé)
+Il a délivré mon âme de la mort,
+Et mes yeux des larmes, mes pieds de la chute.
+Il a détaché mes liens (il a délivré mon âme de la mort !)
+
+J'aime l'Éternel, car il m'a fait du bien.
+Il est mon secours et mon bouclier.
+(J'aime l'Éternel, car il m'a fait du bien)
+L'Éternel est un Dieu plein de compassion,
+Je l'invoquerai toute ma vie.
+(L'Éternel est un Dieu plein de compassion)
+J'invoquerai le nom, le nom de l'Éternel,
+Et j'élèverai la coupe des délivrances.
+(J'invoquerai le nom, le nom de l'Éternel)
+Et je chanterai devant tout son peuple,
+Tous ses bienfaits envers moi.
+(Et je chanterai ses bienfaits envers moi)
+
+
+102
+Car je sais
+Rm 8
+\tCar je sais que ni la mort, ni la vie,
+\tNi les anges, ni les dominations,
+\tNi les choses à venir, ni les choses présentes,
+\tNe pourront me séparer de mon Dieu.
+\tCar je sais qu'aucune autre créature,
+\tNi la hauteur, même la profondeur,
+\tNe pourront me séparer de l'amour de Dieu,
+\tManifesté en Jésus-Christ, notre Seigneur.
+
+Si Dieu est pour nous, qui sera contre nous ?
+Lui qui n'a pas épargné son Fils
+Mais qui l'a livré pour nous,
+Comment ne nous donnera-t-il pas aussi
+Toutes choses avec Lui ?
+
+
+103
+Celui qui vaincra
+Ap 2;3
+Celui qui vaincra, je ferai de lui (bis)
+Une colonne dans le temple de mon Dieu.
+Je le ferai asseoir avec moi sur mon trône.
+Celui qui vaincra sera revêtu (bis)
+De vêtements blancs.
+Je confesserai son nom devant mon Père et devant ses anges
+Parce qu'il en est digne.
+
+Celui qui vaincra, je lui donnerai (bis)
+L'étoile du matin. Je lui donnerai à manger
+De l'arbre de la vie du paradis de Dieu.
+Entends ce que l'Esprit dit aux églises, (bis)
+Et sois vigilant.
+Sois fidèle jusqu'à la mort, et je te donnerai la couronne,
+La couronne de vie. (bis)
+
+
+104
+Ton trône, ô Dieu, est éternel
+Hb 1
+Ton trône, ô Dieu, est éternel. (bis)
+Le sceptre de ton règne est un sceptre d'équité.
+Tu as aimé la justice, tu as haï l'iniquité.
+C'est pourquoi, ô Dieu, ton Dieu t'a oint
+D'une huile de joie au-dessus de tes égaux.
+Mais toi, Seigneur, tu restes le même,
+Tes années ne finiront pas.
+
+Toi, Seigneur, au commencement (bis)
+Tu as fondé la terre et tu as formé les cieux.
+Ils sont l'ouvrage de tes mains;
+Tu subsistes, mais ils passeront.
+Ils vieilliront tous; tu les rouleras
+Comme un manteau et tous ils seront changés.
+Mais toi, Seigneur, tu restes le même,
+Tes années ne finiront pas.
+
+
+105
+Béni soit notre Dieu
+1 Pi 1
+Béni soit notre Dieu, Père de notre Seigneur Jésus-Christ,
+Qui nous a régénérés selon sa grande miséricorde,
+Oui, pour une espérance vivante,
+Par la résurrection de Jésus-Christ
+D'entre les morts, oui, pour un héritage
+Réservé dans les cieux, réservé dans les cieux.
+
+Il nous a rachetés, non pas par de l'argent ou de l'or,
+De la vaine manière de vivre héritée de nos pères,
+Mais par le sang précieux de Christ,
+Comme d'un agneau, comme d'un agneau sans tache
+Et sans défaut, prédestiné avant
+La fondation du monde. Loué soit notre Dieu !
+
+
+106
+Dieu a choisi
+1 Co 1;Rm 5
+Dieu a choisi les choses folles du monde
+Pour confondre les sages.
+Dieu a choisi les choses faibles du monde
+Pour confondre les fortes.
+Dieu a choisi les choses viles du monde,
+Celles qu'on méprise, celles qui ne sont pas,
+Pour réduire à rien celles qui sont.
+Afin que nulle chair ne se glorifie devant Dieu.
+
+\tOr, c'est par lui que vous êtes en Jésus-Christ
+\tQui, de par Dieu, a été fait pour vous sagesse,
+\tJustice, sanctification et rédemption.
+
+Lorsque nous étions encore pécheurs,
+Oui, Christ est mort pour nous.
+(bis)
+Et maintenant que nous sommes justifiés,
+Nous sommes justifiés par la foi,
+Nous sommes réconciliés avec Dieu.
+De la colère, nous serons sauvés par Jésus-Christ.
+
+
+107
+Ce n'est pas nous
+Ep 2;Jn 14;15
+Ce n'est pas nous qui l'avons choisi
+Mais c'est lui qui nous a établis
+Afin que nous allions et que nous portions du fruit.
+
+\tCar nous sommes son ouvrage.
+\tNous avons été créés en Jésus-Christ
+\tPour de bonnes œuvres
+\tQue Dieu a préparées d'avance,
+\tPour de bonnes œuvres, qui sont préparées d'avance
+\tAfin que nous les pratiquions. (bis)
+
+Il est le cep, nous sommes les sarments.
+Et celui qui demeure en lui
+Et en qui il demeure porte beaucoup de fruit.
+
+Celui qui croit, qui croit en Jésus,
+Il fera, oui, les œuvres qu'il fit,
+Il en fera aussi de plus grandes que lui.
+
+
+108
+Je me réjouirai
 Es 61
-L’Esprit du Seigneur l’Éternel est sur moi,
-Car l’Éternel m’a choisi pour porter aux malheureux
-De bonnes nouvelles. Il m’a envoyé
-
-Pour guérir ceux qui ont le cœur brisé,
-Pour proclamer aux captifs la liberté,
-Et aux prisonniers la délivrance.
-Pour consoler tous les affligés,
-Pour leur donner un diadème,
-Au lieu de cendre, au lieu du deuil,
-Un vêtement de louange,
-Une huile de joie, au lieu d’un esprit abattu.
-
-L’Esprit du Seigneur, l’Éternel est sur Christ,
-Car l’Éternel l'a choisi pour porter aux malheureux
-De bonnes nouvelles. Il L’a envoyé (Pour guérir...)
-
-
-94
-Réjouis-toi
-null
-Réjouis-toi, réjouis-toi en l'Éternel !
-Mets en lui ton espoir; il entend ta voix.
-Sois sans crainte, car il vient à ton secours.
-Car il est avec toi pour te délivrer.
-Il fait jaillir des fleuves sur les dunes,
-Et il change le désert en sources d'eau.
-Il fait germer l'herbe sur les montagnes.
-Alléluia, bénissons-le !
-Lui qui fait marcher les aveugles
-Sur un chemin nouveau.
-
-Car l'Éternel est un Dieu juste,
-Heureux tous ceux qui espèrent en lui;
-Il leur donne du pain dans l'angoisse,
-Et dans la détresse donne de l'eau.
-Il te fera grâce, quand tu crieras.
-Quand tu crieras, il t'exaucera,
-Car ainsi a parlé l'Éternel, le Dieu d'Israël.
-
-Réjouis-toi, réjouis-toi en l'Éternel.
-Il pardonne, il guérit, il est un soutien,
-Un appui, un refuge et un secours.
-Je le célébrerai tant que je vivrai.
-C'est dans la tranquillité et le repos
-Que sera, que sera notre salut,
-Et dans notre foi sera notre force.
-Alléluia, bénissons-le !
-Il est près de ceux qui l'invoquent avec sincérité
+Je me réjouirai en l'Éternel, mon Dieu, en l'Éternel mon Dieu,
+(Oh ! je me réjouirai en Dieu, en l'Éternel !)
+Mon âme sera ravie d'allégresse en lui, en l'Éternel.
+(Alléluia, alléluia ! Gloire à lui, gloire à notre Dieu !)
+Car il m'a revêtu des vêtements du salut,
+(Oh ! je me réjouirai dans le Seigneur, je serai ravi d'allégresse)
+Et il m'a couvert du manteau de la délivrance.
+(En l'Éternel, le Dieu de ma justice)
+Il m'a couvert du manteau de la délivrance.
+(Car il m'a revêtu de son salut)
+Je me réjouirai en l'Éternel, mon Dieu, en l'Éternel mon Dieu
+(Oh ! je me réjouirai en Dieu, en l'Éternel !)
+Mon âme sera ravie d'allégresse en lui,
+(Alléluia, alléluia ! Gloire à lui !)
+En l'Éternel, en l'Éternel, mon Dieu.
+(Gloire à notre Seigneur, à notre Sauveur !)
 
 
-95
-Du fond de l'abîme
-Ps
-Du fond de l'abîme je t'invoque, ô Éternel !
-Je suis abattu, courbé, entièrement brisé.
-J'ai péché contre toi et j'ai fait ce qui est mal.
-Ne me châtie pas dans ta fureur, ô Éternel,
-Car je reconnais mes iniquités.
-Comme un lourd fardeau, elles sont trop pesantes pour moi.
-Ô Seigneur, délivre-moi, aie pitié, pitié de moi !
-
-Éternel ! Ô Éternel ! C’est en toi que j'espère.
-Crée en moi un cœur pur, un esprit bien disposé.
-Sois pour moi un rocher protecteur, un sûr abri;
-Je ne chancellerai plus.
-Car je n'ai plus de vigueur à cause de mes péchés,
-Et il n'y a rien de sain ni de bon dans mon cœur.
-Ne t'éloigne pas, ne t'éloigne pas !
-Aie pitié de moi et viens à mon secours !
-
-Garde-moi, ô Dieu, car je cherche en toi mon refuge.
-J'ai crié à toi; tu m'as guéri, tu m'as sauvé.
-En lui mon cœur se confie et je suis secouru.
-Il est le rocher des délivrances de son oint.
-Le secours de l'homme n'est que vanité.
-Mais la bonté de l'Éternel vaut mieux que la vie.
-Le Seigneur m'a exaucé, et de lui vient mon salut.
+109
+Je t'instruirai
+Ps 32
+Je t'instruirai et je te montrerai
+La voie que tu dois suivre.
+Je te conseillerai, je te conseillerai,
+J'aurai le regard sur toi, j'aurai le regard sur toi.
+Je t'instruirai et je te montrerai
+La voie que tu dois suivre.
+Je te conseillerai, j'aurai le regard sur toi.
 
 
-96
-Je m'écrie : \"Loué soit l'Éternel !\"
-Ps 18
-\tJe m'écrie : \"Loué soit l'Éternel !\" et je suis délivré !
-\tJe m'écrie : \"Loué !\"; je suis délivré de tous mes ennemis !
-
-Les liens de la mort m'avaient environné,
-Ceux du sépulcre m'avaient entouré.
-Dans ma détresse, j'ai crié vers mon Dieu.
-Mon cri est parvenu à ses oreilles.
-
-Et la terre fut ébranlée et trembla;
-Il abaissa les cieux et descendit.
-Le Très-Haut tonna, fit retentir sa voix,
-Dispersa mes ennemis de ses flèches.
-
-Il étendit sa main d'en-haut, me saisit,
-Et il me retira des grandes eaux.
-Il me délivra de l'ennemi puissant.
-Il m'a mis au large parce qu'il m'aime.
+110
+À celui qui peut
+Jd 24,25
+À celui qui peut nous préserver
+De toute chute, oui, de toute chute,
+Et nous faire paraître devant lui
+Irrépréhensibles et dans l'allégresse,
+À notre Dieu, par Jésus notre Seigneur,
+À lui soient la gloire et la majesté,
+La force et la puissance
+Dès avant tous les temps.
+Et maintenant, et dans tous les siècles,
+À lui soient la gloire et la majesté,
+La force et la puissance
+Dès avant tous les temps,
+Dans tous les siècles, amen !
 
 
-97
-Ma grâce te suffit
-2 Co 12;Hb 13;1 Co 15
-\tMa grâce te suffit
-\tCar Ma puissance s'accomplit
-\tDans la faiblesse.
-\tMa grâce te suffit
-\tTous les jours de ta vie.
+111
+Frères, n'aimez pas le monde
+1 Jn 2; Ti 2; 1 Co 2; 1 Pi 1
+\tRefrain :
+\tFrères, n'aimez pas le monde,
+\tNi tout ce qui est dans le monde.
+\tSi quelqu'un aime le monde,
+\tL'amour du Père n'est point en lui.
+\tEt le monde passera et sa convoitise aussi.
 
-Quand dans la maladie ou bien la souffrance
-Ta force vient à faiblir, n'oublie pas ceci :
+\tCoda :
+\tMais celui qui fait la volonté de Dieu
+\tDemeure éternellement.
 
-Il est bon que ton cœur en soit affermi.
-La grâce est en Jésus-Christ, confie-toi en lui.
+Car la grâce de Dieu,
+Source de salut pour tous les hommes,
+Nous enseigne à renoncer
+Aux convoitises mondaines,
+Et à vivre dans l'attente
+De la bienheureuse espérance,
+La manifestation de notre Sauveur Jésus-Christ.
 
-Oui, sa grâce envers moi n'est pas restée vaine.
-Je ne la rejette pas ! Ne t'en prive pas !
-
-
-98
-Quand ton peuple
-1 Rs 8
-Quand ton peuple sera battu devant l'ennemi
-Pour avoir péché contre toi,
-S'il t'adresse des prières et des supplications,
-De ton peuple, Seigneur, de ton peuple, Seigneur,
-Tu pardonneras le péché !
-
-\tÔ Éternel, ne nous abandonne pas ! (bis)
-
-Quand ton peuple subira des plaies, des maladies,
-Seigneur, écoute-le des cieux !
-Ta justice rendra à chacun selon ses voies.
-Car toi seul tu connais, car toi seul tu connais
-Le cœur de tous les humains.
-
-\tÔ Éternel, élève nos cœurs vers toi !
-\tAfin que nous marchions dans toutes tes voies !
-
-Éternel, il n'y a pas de Dieu semblable à toi,
-Ni dans les cieux, ni sur la terre.
-Tu gardes ton alliance envers tes serviteurs
-Qui marchent en ta présence, qui marchent en ta présence
-Qui marchent de tout leur cœur.
-
-\tÔ Éternel, nous rendons gloire à ton nom ! (bis)
+Nous n'avons pas reçu
+L'esprit du monde, mais l'Esprit qui vient de Dieu
+Afin que nous connaissions
+Ce que Dieu nous a donné par sa grâce,
+Nous qui sommes gardés
+Dans la puissance de Dieu par la foi,
+Pour le grand salut qui sera bientôt révélé.
 
 
-99
-Éternel, tu nous donnes la paix
-Es 25;26
-Éternel, tu nous donnes la paix, oh... !
-Car tout ce que nous faisons
-C'est toi qui l'accomplis pour nous.
-À celui qui écoute ta voix, oh... !
-(Oh... ! À celui qui marche dans tes voies)
-Tu assures la paix, oui la paix,
-(Tu assures la paix, la paix)
-Parce qu'il se confie en toi.
-
-Seigneur, tu as été un refuge, oh... !
-Et un abri pour le faible,
-Le malheureux qui crie à toi.
-Mais tu abats l'orgueil des méchants, oh... !
-(Oh... ! tu rends à chacun selon ses voies)
-Et en toi nous avons espéré,
-(En toi nous avons espéré)
-Et c'est toi qui nous as sauvés.
+112
+Que le Dieu de paix
+1 Th 5
+Que le Dieu de paix vous sanctifie
+Lui-même tout entiers.
+Ainsi que tout votre être, l'esprit, l'âme et le corps,
+Soit conservé, sans défaut, sans tache
+Pour le retour du Seigneur Jésus.
+Celui qui vous a appelés est fidèle,
+Et c'est lui qui le fera (bis)
 
 
-100
-Reviens à ton Dieu
-Os 14
-Reviens, reviens à ton Dieu, reviens !
-(Reviens à ton Dieu, reviens ! Oui, reviens à ton Dieu, reviens à lui !)
-Reviens à lui (Reviens à lui !)
-Reviens, reviens à ton Dieu, car tu es tombé.
-(Reviens, reviens ! Reviens à ton Dieu ! Oh, oui ! Reviens !)
-Tu es tombé par ton péché.
-(Tu es tombé, tu es tombé par ton péché ! Ton péché)
-Apporte avec toi, apporte avec toi,
-(Apporte avec toi, apporte avec toi)
-Des paroles, et reviens à ton Dieu !
-(Avec toi des paroles et reviens à ton Dieu !)
-Oh, oui ! Reviens ! Oh, oui ! Reviens ! (Reviens à ton Dieu !)
+113
+Servez Christ, le Seigneur
+Cl 3;4
+\tServez Christ, le Seigneur, rachetez le temps ! (bis)
+\tEt chantez à Dieu (bis)
+\tDe tout votre cœur
+\tSous l'inspiration de la grâce.
 
-Dis-lui : Oh ! Pardonne-moi !
-(Oh ! pardonne-moi, pardonne ! Oh, oui ! Pardonne-moi !)
-Accueille, accueille-moi ! (Accueille-moi ! Accueille-moi !)
-Au lieu, au lieu d'offrande, (Au lieu d'offrande, je t'offrirai)
-Je t'offrirai l'hommage de mes lèvres.
-(... l'hommage je T'offrirai, je T'offrirai l'hommage de mes lèvres)
-Je me confierai, non plus, plus en moi,
-(Je me confierai non plus en moi,)
-En mes forces, mais en toi, toi en qui je trouve la compassion
-(En moi, mais en toi en qui je trouve, je trouve la compassion)
+Quoi que vous fassiez, en paroles ou en œuvres,
+Oui, faites tout au nom du Seigneur Jésus
+En rendant grâces, par lui, à Dieu le Père.
+Et prenez garde au ministère que vous avez reçu,
+Reçu dans le Seigneur,
+Afin de le bien remplir, le bien remplir.
 
-J'aurai, j'aurai, moi, ton Dieu
-(J'aurai, moi, ton Dieu, j'aurai, oui j'aurai, moi, ton Dieu)
-Pour toi l'amour généreux (Pour toi, l'amour généreux)
-Voici, je réparerai l'infidélité, (je réparerai l'infidélité, réparerai)
-Ton inconstance envers ton Dieu.
-(Ton inconstance, ton inconstance envers ton Dieu, ton Dieu)
-Je t'exaucerai, je serai pour toi comme la rosée.
-(Je t'exaucerai, je serai pour toi, pour toi)
-C'est de moi que viendra ton fruit, oh oui, ton fruit.
-(Comme la rosée; c'est de moi que viendra, que viendra ton fruit)
+Que la paix de Christ, à laquelle vous êtes appelés
+Pour former un seul corps, règne dans vos cœurs.
+Et que la Parole de Christ habite en vous.
+Et revêtez-vous, revêtez-vous de l'amour qui est le lien
+Le lien de perfection.
+Et soyez reconnaissants, reconnaissants.
+
+
+114
+Heureux celui
+Ps 65
+\tHeureux celui que tu choisis,
+\tQue tu admets dans ta présence,
+\tPour qu'il habite dans tes parvis,
+\tDans ta maison !
+
+Nous nous rassasieron
+Du bonheur de ta maison,
+De la sainteté de ton temple.
+Nous nous rassasierons,
+Du bonheur de ta maison,
+De la sainteté de ton temple (bis)
+
+
+115
+Il n'y a de salut
+Ac 4;Jn 14
+\tIl n'y a de salut en aucun autre nom,
+\tIl n'y a de salut en aucun autre nom que celui de Jésus.
+\tCar il n'y a sous le ciel
+\tAucun autre nom qui ait été donné
+\tParmi les hommes,
+\tPar lequel nous devions être sauvés. (bis)
+
+Et ce nom, c'est celui de Jésus
+Qui a dit : \"Je suis\".
+Il a dit : \"Je suis le chemin, la vérité, je suis la vie;
+Nul ne vient au Père que par moi.\"
+
+
+116
+Seigneur, tu as été pour nous un refuge
+Ps 90
+\tSeigneur, tu as été pour nous un refuge,
+\tDe génération en génération.
+\tAvant que tu aies créé la terre et le monde,
+\tD’éternité en éternité tu es Dieu.
+
+Aie pitié de nous Éternel, toi qui fais
+Rentrer les hommes dans la poussière,
+Et qui leur dis : fils de l’homme,
+Retournez, oui, retournez !
+Car à tes yeux, Seigneur,
+Mille ans sont comme une veille,
+Une veille de la nuit, (bis)
+De la nuit.
+
+Qui prend garde à la force de ton courroux,
+Selon la crainte qui t’est due ?
+Nos années s’évanouissent
+Comme un son. Enseigne-nous
+À bien compter nos jours
+Afin que nous appliquions
+À la sagesse notre cœur, (bis)
+Notre cœur.
     ";
 
     /**
@@ -797,7 +561,6 @@ C'est de moi que viendra ton fruit, oh oui, ton fruit.
         $hymn->formatLyricsFromBDD();
         $form = $this->createForm(HymnType::class, $hymn);
 
-
         if($request->isMethod('POST'))
         {
             $form->handleRequest($request);
@@ -805,7 +568,8 @@ C'est de moi que viendra ton fruit, oh oui, ton fruit.
             if($form->isValid() AND !$hymn->hasError())
             {
                 $hymn->formatLyricsToBDD();
-                $hymn->getMusicalPart()->uploadFile();
+                if(null !== $hymn->getMusicalPart())
+                    $hymn->getMusicalPart()->uploadFile();
                 $em->persist($hymn);
                 $em->flush();
 
