@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
 use Timothee\ModelBundle\Entity\Hymn;
+use Timothee\ModelBundle\Entity\MusicalPart;
 use Timothee\ModelBundle\Form\HymnType;
 
 
@@ -183,7 +184,9 @@ Et rendez grâces en toute chose au Seigneur !
                     "title" => $hymn->getTitle(),
                     "num" => $hymn->getNum(),
                     "ref" => $hymn->getRef(),
-                    "lyrics" => $hymn->getLyrics()
+                    "lyrics" => $hymn->getLyrics(),
+                    "xml" => null !== $hymn->getMusicalPart() ? $hymn->getMusicalPart()->getXML() : null,
+                    "xmlPath" => null !== $hymn->getMusicalPart() ? $hymn->getMusicalPart()->getFilePath() : null
                 ]
             );       
         }
@@ -199,35 +202,38 @@ Et rendez grâces en toute chose au Seigneur !
     {
         $em = $this->getDoctrine()->getManager();
 
-        $hymn = $em
+        $hymns = $em
                 ->getRepository("TimotheeModelBundle:Hymn")
                 ->findby(array("num" => $num));
+        $hymn = null;
 
-        if(empty($hymn))
+        foreach ($hymns as $h) { $hymn = $h; }
+
+        if(null === $hymn)
             return new JsonResponse(array(), Response::HTTP_NOT_FOUND);
 
 
         $formatted = [];
 
-        foreach ($hymn as $h) {
-            array_push(
-                $formatted,
-                [
-                    "id" => $h->getId(),
-                    "title" => $h->getTitle(),
-                    "num" => $h->getNum(),
-                    "ref" => $h->getRef(),
-                    "lyrics" => $h->getLyrics()
-                ]
-            );       
-        }              
+        array_push(
+            $formatted,
+            [
+                "id" => $hymn->getId(),
+                "title" => $hymn->getTitle(),
+                "num" => $hymn->getNum(),
+                "ref" => $hymn->getRef(),
+                "lyrics" => $hymn->getLyrics(),
+                "xml" => null !== $hymn->getMusicalPart() ? $hymn->getMusicalPart()->getXML() : null,
+                "xmlPath" => null !== $hymn->getMusicalPart() ? $hymn->getMusicalPart()->getFilePath() : null
+            ]
+        );       
 
         return new JsonResponse($formatted);
     }
 
 
     /**
-     * @Route("hymns/add", name="addHymn")
+     * @Route("/hymns/add", name="addHymn")
      * @Method({"GET","POST"})
      */
     public function addHymnAction(Request $request)
@@ -244,6 +250,7 @@ Et rendez grâces en toute chose au Seigneur !
             if($form->isValid() AND !$hymn->hasError())
             {
                 dump($hymn); die;
+                $hymn->getMusicalPart()->uploadFile();
                 // $em = $this->getDoctrine()->getManager();
                 // $em->persist($hymn);
                 // $em->flush();
@@ -266,7 +273,7 @@ Et rendez grâces en toute chose au Seigneur !
 
 
     /**
-     * @Route("hymns/edit/{num}", name="editHymn", requirements={"num"="\d+a?b?"})
+     * @Route("/hymns/edit/{num}", name="editHymn", requirements={"num"="\d+a?b?"})
      * @Method({"GET","POST"})
      */
     public function editHymnAction(Request $request, $num)
@@ -292,6 +299,7 @@ Et rendez grâces en toute chose au Seigneur !
             if($form->isValid() AND !$hymn->hasError())
             {
                 $hymn->formatLyricsToBDD();
+                $hymn->getMusicalPart()->uploadFile();
                 $em->persist($hymn);
                 $em->flush();
 

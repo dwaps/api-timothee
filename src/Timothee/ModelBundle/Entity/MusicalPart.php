@@ -96,4 +96,9 @@ class MusicalPart
     {
         return __DIR__.'/../../../../web/'.$this->getUploadDir();
     }
+
+    public function getFilePath()
+    {
+        return $this->getUploadDir().'/'.$this->xml;
+    }
 }
