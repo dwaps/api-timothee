@@ -6,11 +6,16 @@
 	    <div class="alert-success">{{ mss }}</div>
 	{% endfor %}
 
+
+	<div class="alert-danger">
+		IMPORTANT !!! >>> Formulaire ajout : Gérer le formatage des paroles saisies (bouton tab !)
+	</div>
+
 	<div class="margin-top">
 		<a
 			href="{{ path('fillBDD') }}"
 			class="btn btn-danger">
-			Remplir la base de données
+			Remplir la base de données (en dur via TimotheeModelBundel:HymnsController:fillBDDAction)
 		</a>
 		<br><br>
 		<a
@@ -18,7 +23,7 @@
 			class="btn btn-success">
 			Tous les chants (json)
 		</a>
-		<br><br>	
+		<br><br>
 		<form action="{{ path('home') }}" method="POST">
 			<input type="text" name="numberShowHymn" style="width:50px">
 			<input
