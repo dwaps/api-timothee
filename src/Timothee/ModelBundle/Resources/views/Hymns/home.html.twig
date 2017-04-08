@@ -2,11 +2,6 @@
 
 {% block body %}
 
-	{% for mss in app.session.flashbag.get('info') %}
-	    <div class="alert-success">{{ mss }}</div>
-	{% endfor %}
-
-
 	<div class="alert-danger">
 		IMPORTANT !!! >>> Formulaire ajout : Gérer le formatage des paroles saisies (bouton tab !)
 	</div>
@@ -17,36 +12,66 @@
 			class="btn btn-danger">
 			Remplir la base de données (en dur via TimotheeModelBundel:HymnsController:fillBDDAction)
 		</a>
+
 		<br><br>
-		<a
-			href="{{ path('hymns') }}"
-			class="btn btn-success">
-			Tous les chants (json)
-		</a>
 		<br><br>
-		<form action="{{ path('home') }}" method="POST">
-			<input type="text" name="numberShowHymn" style="width:50px">
-			<input
-				type="submit"
-				class="btn btn-success"
-				value="Chant par numéro (json)">
-			</input>
-		</form>
-		<br><br>	
-		<form action="{{ path('home') }}" method="POST">
-			<input type="text" name="numberEditHymn" style="width:50px">
-			<input
-				type="submit"
-				class="btn btn-danger"
-				value="Modifier un chant">
-			</input>
-		</form>
-		<br><br>
-		<a
-			href="{{ path('addHymn') }}"
-			class="btn btn-danger">
-			Ajouter un chant
-		</a>
+
+
+{# API #}
+
+		<div class="alert-success text-center">
+			API
+		</div>
+
+		{% for mss in app.session.flashbag.get('info') %}
+		    <div class="alert-success">{{ mss }}</div>
+		{% endfor %}
+
+
+		<table class="table">
+			<tr>
+				<td>
+					<a
+						href="{{ path('hymns') }}"
+						class="btn btn-success">
+						Tous les chants (json)
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="{{ path('home') }}" method="POST">
+						<input type="text" name="numberShowHymn" style="width:50px">
+						<input
+							type="submit"
+							class="btn btn-success"
+							value="Chant par numéro (json)">
+						</input>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form action="{{ path('home') }}" method="POST">
+						<input type="text" name="numberEditHymn" style="width:50px">
+						<input
+							type="submit"
+							class="btn btn-danger"
+							value="Modifier un chant">
+						</input>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a
+						href="{{ path('addHymn') }}"
+						class="btn btn-danger">
+						Ajouter un chant
+					</a>
+				</td>
+			</tr>
+		</table>
 	</div>
 
 {% endblock %}

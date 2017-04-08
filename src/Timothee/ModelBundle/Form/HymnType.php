@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 use Timothee\ModelBundle\Form\MusicalPartType;
 
@@ -83,4 +84,10 @@ class HymnType extends AbstractType
     }
 
 
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'intention' => 'task_form',
+        ));
+    }
 }
