@@ -225,7 +225,7 @@ class Hymn
 
     public function formatLyricsToBDD()
     {
-        $this->lyrics = preg_replace("/\t/", "<span style='padding-left:15px'></span>", $this->lyrics);
+        $this->lyrics = preg_replace("/#|\t/", "<span style='padding-left:15px'></span>", $this->lyrics);
         $this->lyrics = preg_replace("/\n/", "<br>", $this->lyrics);
         $this->lyrics = str_replace(array("\r"), "", $this->lyrics);
     }

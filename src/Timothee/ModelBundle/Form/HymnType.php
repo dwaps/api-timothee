@@ -34,6 +34,7 @@ class HymnType extends AbstractType
                 TextareaType::class,
                 array(
                     'label' => 'Référence.s',
+                    'required' => false,
                     'attr' => array(
                         'placeholder' => 'Saisir la référence au bon format !'
                     ),
