@@ -701,6 +701,10 @@ Elle retentit en tous ceux qui croient.
      */
     public function addHymnAction(Request $request)
     {
+        $token = $this->getParameter('secret');
+        $tokenParam = $request->query->get('token');
+        if($tokenParam !== $token) return $this->redirectToRoute('home');
+
         $hymn = new Hymn();
         $errors = [];
 
@@ -743,6 +747,11 @@ Elle retentit en tous ceux qui croient.
      */
     public function editHymnAction(Request $request, $num)
     {
+        $token = $this->getParameter('secret');
+        $tokenParam = $request->query->get('token');
+        if($tokenParam !== $token) return $this->redirectToRoute('home');
+
+
         $em = $this->getDoctrine()->getManager();
         $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findBy(array("num" => $num));
         $errors = []; $hymn = null;
