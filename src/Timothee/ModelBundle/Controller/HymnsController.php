@@ -543,11 +543,22 @@ Sa parole est pleine de grâce,
 Elle retentit en tous ceux qui croient.
     ";
 
+
     /**
      * @Route("/", name="home")
      */
     public function homeAction(Request $request)
     {
+        $userConnected = $this->get('security.authorization_checker')->isGranted('ROLE_ADMIN');
+        $username = null;
+
+        $user = $this->getUserConnected();
+
+        if(is_object($user))
+        {
+            $username = $user->getUsername();
+        }
+
         if($request->isMethod('POST'))
         {
             if($request->request->get('numberShowHymn'))
@@ -573,7 +584,10 @@ Elle retentit en tous ceux qui croient.
                 return $this->redirectToRoute($route, array('num' => $numberHymn));
         }
 
-        return $this->render("TimotheeModelBundle:Hymns:home.html.twig");
+        return $this->render("TimotheeModelBundle:Hymns:home.html.twig", array(
+            "userConnected" => $userConnected,
+            "username" => $username
+        ));
     }
 
 
@@ -701,10 +715,24 @@ Elle retentit en tous ceux qui croient.
      */
     public function addHymnAction(Request $request)
     {
-        $token = $this->getParameter('secret');
-        $tokenParam = $request->query->get('token');
-        if($tokenParam !== $token) return $this->redirectToRoute('home');
+        $user = $this->getUserConnected();
 
+        // S'il ne s'agit pas d'une connexion...
+        if( !is_object($user) )
+        {
+            $token = $this->getParameter('secret');
+            $tokenParam = $request->query->get('token');
+
+            // ... ou s'il ne s'agit pas d'un accès via token
+            if( $tokenParam !== $token )
+            {
+                return $this->redirectToRoute('home');
+            }
+        }
+
+
+        // Si l'accès est autorisé, on passe à la suite...
+        
         $hymn = new Hymn();
         $errors = [];
 
@@ -747,10 +775,23 @@ Elle retentit en tous ceux qui croient.
      */
     public function editHymnAction(Request $request, $num)
     {
-        $token = $this->getParameter('secret');
-        $tokenParam = $request->query->get('token');
-        if($tokenParam !== $token) return $this->redirectToRoute('home');
+        $user = $this->getUserConnected();
 
+        // S'il ne s'agit pas d'une connexion...
+        if( !is_object($user) )
+        {
+            $token = $this->getParameter('secret');
+            $tokenParam = $request->query->get('token');
+
+            // ... ou s'il ne s'agit pas d'un accès via token
+            if( $tokenParam !== $token )
+            {
+                return $this->redirectToRoute('home');
+            }
+        }
+
+
+        // Si l'accès est autorisé, on passe à la suite...
 
         $em = $this->getDoctrine()->getManager();
         $hymns = $em->getRepository("TimotheeModelBundle:Hymn")->findBy(array("num" => $num));
@@ -792,6 +833,15 @@ Elle retentit en tous ceux qui croient.
                 "ref" => $hymn->getRef(),
                 "errors" => $errors
         ));
+    }
+
+
+    private function getUserConnected()
+    {
+        return $this
+            ->get('security.token_storage')
+            ->getToken()
+            ->getUser();
     }
 
 }

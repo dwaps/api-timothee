@@ -114,7 +114,7 @@ assetic:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: '@TimotheeUserBundle\Entity\User'
+    user_class: Timothee\UserBundle\Entity\User
     from_email:
         address: "%mailer_user%"
-        sender_name: "No Reply"
+        sender_name: "%mailer_user%"

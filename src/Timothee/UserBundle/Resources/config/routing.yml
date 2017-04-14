@@ -1,3 +1,10 @@
-timothee_user_homepage:
-    path:     /
-    defaults: { _controller: TimotheeUserBundle:Default:index }
+timothee_user_login:
+    path: /login
+    defaults:
+        _controller: TimotheeUserBundle:User:login
+
+timothee_user_login_check:
+    path: /login_check
+
+timothee_user_logout:
+    path: /logout
