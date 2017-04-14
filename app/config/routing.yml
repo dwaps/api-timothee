@@ -1,5 +1,12 @@
+timothee_user:
+    resource: "@TimotheeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 timothee_model:
     resource: "@TimotheeModelBundle/Controller/"
     type:     annotation
     prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 

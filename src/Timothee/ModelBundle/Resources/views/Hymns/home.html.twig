@@ -46,27 +46,48 @@
 					</form>
 				</td>
 			</tr>
-			<tr>
-				<td>
-					<form action="{{ path('home') }}" method="POST">
-						<input type="text" name="numberEditHymn" style="width:50px">
-						<input
-							type="submit"
-							class="btn btn-danger"
-							value="Modifier un chant">
-						</input>
-					</form>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a
-						href="{{ path('addHymn') }}"
-						class="btn btn-danger">
-						Ajouter un chant
-					</a>
-				</td>
-			</tr>
+			{% if connectedUsers is defined %}
+				<tr>
+					<td>
+						<form action="{{ path('home') }}" method="POST">
+							<input type="text" name="numberEditHymn" style="width:50px">
+							<input
+								type="submit"
+								class="btn btn-danger"
+								value="Modifier un chant">
+							</input>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="{{ path('addHymn') }}"
+							class="btn btn-danger">
+							Ajouter un chant
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a
+							href="{{ path('logout') }}"
+							class="btn btn-warning">
+							Deconnexion
+						</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td>
+						<a
+							href="{{ path('login') }}"
+							class="btn btn-warning">
+							Connexion administrateur
+						</a>
+					</td>
+				</tr>
+			{% endif %}
 		</table>
 	</div>
 
